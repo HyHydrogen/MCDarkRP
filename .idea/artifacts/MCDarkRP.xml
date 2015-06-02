@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MCDarkRP">
+    <output-path>$USER_HOME$/Desktop/Desktop/Server/plugins</output-path>
+    <root id="archive" name="MCDarkRP.jar">
+      <element id="module-output" name="DarkRP" />
+    </root>
+  </artifact>
+</component>
