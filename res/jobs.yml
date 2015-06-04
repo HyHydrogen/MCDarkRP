@@ -1,0 +1,57 @@
+jobs:
+  citizen:
+    name: '&cCitizen'
+    pay: 45.0
+    permission: null
+    limit: -1
+    description:
+    - "&cYou roam around the streets trying to find a purpose"
+    - "&cYou may not have a gun!"
+    inventory:
+    - rp_atmcard
+    - rp_keys
+  gangsta:
+    name: '&cGangsta'
+    pay: 55.0
+    permission: null
+    limit: 12
+    description:
+    - "&cFuck people up!"
+    inventory:
+    - rp_atmcard
+    - rp_keys
+  police-officer:
+    name: '&bPolice Officer'
+    pay: 100.0
+    permission: null
+    limit: 10
+    description:
+    - "&cKeep order in the city!"
+    inventory:
+    - rp_atmcard
+    - rp_pdkeys
+    - rp_glock
+    - rp_arrestbaton
+    - rp_unarrestbaton
+  mayor:
+    name: '&4Mayor'
+    pay: 200
+    permission: null
+    limit: 1
+    description:
+    - "&cYou are the mayor, setup laws and rule the land!"
+    inventory:
+    - rp_atmcard
+    - rp_keys
+    - rp_pdkeys
+    - rp_unarrestbaton
+  medic:
+  thief:
+  master-thief:
+  hobo:
+  chief-of-police:
+  swat-unit:
+  swat-leader:
+  prostitute:
+  terrorist:
+  terrorist-leader:
