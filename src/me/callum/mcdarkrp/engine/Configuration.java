@@ -1,6 +1,7 @@
 package me.callum.mcdarkrp.engine;
 
 import java.io.File;
+
 import org.bukkit.configuration.file.YamlConfiguration;
 
 
@@ -13,19 +14,31 @@ public class Configuration extends YamlConfiguration {
 
     public void reload() {
         try {
+            if (!file.exists())
+                return;
             load(file);
-        }catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void create() {
         try {
-            if(!file.getParentFile().exists())
+            if (!file.getParentFile().exists())
                 file.getParentFile().mkdirs();
-            if(file.exists())
+            if (!file.exists())
                 file.createNewFile();
-        }catch(Exception e) {
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void save() {
+        try {
+            if (!file.exists())
+                return;
+            save(file);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

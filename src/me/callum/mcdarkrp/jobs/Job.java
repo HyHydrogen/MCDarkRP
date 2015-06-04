@@ -1,5 +1,6 @@
 package me.callum.mcdarkrp.jobs;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,11 +9,12 @@ import org.bukkit.inventory.ItemStack;
 
 public class Job {
     private String jobName;
+    private String displayName;
     private String permission;
     private List<String> description;
 
     private float pay;
-    private ItemStack[] inventory;
+    private List<String> inventory;
 
     private ItemStack icon;
 
@@ -20,16 +22,21 @@ public class Job {
 
     public Job(String name) {
         setName(name);
+        setDisplayName(name);
         setPermission(null);
         setDescription(Arrays.asList(""));
         setPay(0);
-        setInventory(new ItemStack[36]);
+        setInventory(new ArrayList<String>());
         setJobLimit(0);
         setIcon(new ItemStack(Material.COBBLESTONE));
     }
 
     public void setName(String name) {
         this.jobName = name;
+    }
+
+    public void setDisplayName(String name) {
+        this.displayName = name;
     }
 
     public void setPermission(String permission) {
@@ -40,16 +47,16 @@ public class Job {
         this.description = list;
     }
 
-    public void setPay(float pay){
+    public void setPay(float pay) {
         this.pay = pay;
     }
 
-    public void setInventory(ItemStack[] inv) {
+    public void setInventory(List<String> inv) {
         this.inventory = inv;
     }
 
-    public void setSlot(int slot, ItemStack stack) {
-        this.inventory[slot] = stack;
+    public void setSlot(int slot, String stack) {
+        this.inventory.set(slot, stack);
     }
 
     public void setIcon(ItemStack item) {
@@ -64,8 +71,16 @@ public class Job {
         return jobName;
     }
 
+    public String getDisplayName() {
+        return displayName;
+    }
+
     public String getPermission() {
         return permission;
+    }
+
+    public int getJobLimit() {
+        return jobLimit;
     }
 
     public List<String> getDescription() {
@@ -76,7 +91,7 @@ public class Job {
         return pay;
     }
 
-    public ItemStack[] getInventory() {
+    public List<String> getInventory() {
         return inventory;
     }
 

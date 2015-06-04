@@ -1,6 +1,7 @@
 package me.callum.mcdarkrp.core;
 
 import me.callum.mcdarkrp.engine.ChatFormatter;
+import me.callum.mcdarkrp.jobs.JobManager;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
@@ -14,6 +15,8 @@ public class DarkRP extends JavaPlugin implements Listener {
         chatFormatter = new ChatFormatter(this);
 
         getServer().getPluginManager().registerEvents(this, this);
+
+        JobManager manager = new JobManager(this);
     }
 
     public void onDisable() {
